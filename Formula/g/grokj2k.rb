@@ -96,7 +96,7 @@ class Grokj2k < Formula
     testpath.install resource("homebrew-test_image")
     system bin/"grk_compress", "--in-file", "basn6a08.tif",
                                "--out-file", "test.jp2", "--out-fmt", "jp2"
-    output = shell_output("#{Formula["exiftool"].bin}/exiftool test.jp2")
+    output = shell_output("#{formula_opt_bin("exiftool")}/exiftool test.jp2")
 
     expected_fields = [
       "Capture X Resolution            : 2835",
